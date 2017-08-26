@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+const AffiliatesController = require("./controllers/affiliate");
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/affiliate-form
 
@@ -17,6 +18,8 @@ connection.on('error', (err) => {
 }); 
 
 app.use(bodyParser.json());
+
+app.use('/api/affiliate', AffiliatesController);
 app.get('/', (req,res) => {
   res.send('Hello world!')
 })
