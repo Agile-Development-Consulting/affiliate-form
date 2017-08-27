@@ -40,8 +40,9 @@ class Dashboard extends Component {
         return (
             <div className="row">
                 <h1>Your Affiliate Form Generator</h1>
-                {affiliateComponent}
                 <AffiliateAddForm {...this.props} getAffiliateData={this._getAffiliateData}/>
+                {affiliateComponent}
+                
             </div>
         );
     }
