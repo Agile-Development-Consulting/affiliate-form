@@ -101,7 +101,7 @@ class HtmlOne extends Component {
                 
                                                        <strong>Speakers & Topics Including:</strong><br><br>
                 
-                                                   <a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.27.10-AM.png" style="display: block; margin: 0
+                                                   <a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/${this.state.affiliate.token}-1.png" style="display: block; margin: 0
                 
                                                    auto;" width="100%" /><br><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.20.40-AM.png" style="display: block; margin: 0
                 
