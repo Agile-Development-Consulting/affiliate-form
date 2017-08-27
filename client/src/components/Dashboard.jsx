@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import IndividualAffiliate from "./IndividualAffiliate";
+import AffiliateAddForm from "./AffiliateAddForm";
+import HtmlOne from "./HtmlOne";
 
 class Dashboard extends Component {
 
@@ -19,20 +22,30 @@ class Dashboard extends Component {
         this._getAffiliateData();
     }
     _getAffiliateData = () => {
+        console.log("Component mounted")
         axios.get(`/api/affiliate/`)
         .then(res => {
-            this.setState({affilates: res.data})
+            this.setState({affiliates: res.data})
         })
     }
+
     render() {
         const affiliates=  this.state.affiliates;
         console.log(affiliates)
+        const affiliateComponent = affiliates.map((affiliate, i) => {
+            return <IndividualAffiliate
+            {...affiliate}
+            key={i} />
+        })
         return (
             <div>
                 This is my dashboard.
+                {affiliateComponent}
+                <AffiliateAddForm {...this.props} getAffiliateData={this._getAffiliateData}/>
             </div>
         );
     }
 }
+
 
 export default Dashboard;

@@ -7,9 +7,15 @@ const affiliateSchema = mongoose.Schema({
   token: String
 });
 
+const emailSchema = mongoose.Schema({
+    code: String
+});
+
 
 const Affiliate = mongoose.model('Affiliate', affiliateSchema);
+const Email = mongoose.model('Email', emailSchema);
 
 module.exports = {
-  Affiliate
+  Affiliate,
+  Email
 }

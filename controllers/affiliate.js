@@ -1,25 +1,26 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose')
-const User = require("../models/affiliate");
+const Affiliate = require("../models/affiliate");
 
 
 
 router.get("/", (req, res) => {
-  Affiliate.find().then((user) => {
+  Affiliate.find().then((affiliate) => {
     res.json(affiliate);
   });
 });
 
 router.post("/create", (req, res) => {
     console.log("Hit the API")
-    const newAffiliateInfo = req.body
+    const newAffiliateInfo = req.body.affiliate
     console.log(newAffiliateInfo)
     const newAffiliate = new Affiliate(newAffiliateInfo);
-    newUser.save()
-    .then(() => {
-        res.send("You did it!");
-    })
+    newAffiliate
+        .save()
+        .then(() => {
+            res.json(newAffiliate);
+        })
     .catch(err => console.log(err));
 })
 
