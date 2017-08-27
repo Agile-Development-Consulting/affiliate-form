@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class HtmlOne extends Component {
+    constructor() {
+        super();
+        this.state = {
+            affiliate: {
+                    name: '',
+                    link: '',
+                    token: ''
+                }
+        }
+    }
+    componentWillMount() {
+        this._getAffiliateData();
+    }
+    _getAffiliateData = () => {
+        axios.get(`/api/affiliate/${this.props.match.params.affiliateId}`)
+        .then(res => {
+            this.setState({affiliate: res.data})
+        })
+    }
     render() {
         return (
             <div>
@@ -63,7 +83,7 @@ class HtmlOne extends Component {
                 
                 center; line-height: 25px; font-size: 17px; margin: 0 0
                 
-                20px; padding: 0;"><a href="${this.props.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/hope_main_Full.png" style="display: block; margin: 0
+                20px; padding: 0;"><a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/hope_main_Full.png" style="display: block; margin: 0
                 
                 auto;" width="100%" /></a><br>
                 
@@ -81,7 +101,7 @@ class HtmlOne extends Component {
                 
                                                        <strong>Speakers & Topics Including:</strong><br><br>
                 
-                                                   <a href="${this.props.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.27.10-AM.png" style="display: block; margin: 0
+                                                   <a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.27.10-AM.png" style="display: block; margin: 0
                 
                                                    auto;" width="100%" /><br><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.20.40-AM.png" style="display: block; margin: 0
                 
@@ -97,7 +117,7 @@ class HtmlOne extends Component {
                 
                 16px; padding: 0;"><strong>And So Many More: </strong>
                 
-                                                    <br><br><a href="${this.props.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.36.42-AM.png" style="display: block; margin: 0
+                                                    <br><br><a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.36.42-AM.png" style="display: block; margin: 0
                 
                 auto;" width="100%" /></a><p style="font-family: 'Merriweather',
                 
@@ -109,9 +129,9 @@ class HtmlOne extends Component {
                 
                 16px; padding: 0;"><strong>Here's What You Get: </strong><br><br>
                 
-                                                    <a href="${this.props.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.56.57-AM.png" style="display: block; margin: 0
+                                                    <a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.56.57-AM.png" style="display: block; margin: 0
                 
-                auto;" width="100%" /></a><br><a href="${this.props.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.55.17-AM.png" style="display: block; margin: 0
+                auto;" width="100%" /></a><br><a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/Screen-Shot-2017-08-23-at-8.55.17-AM.png" style="display: block; margin: 0
                 
                 auto;" width="100%" /></a>
                 

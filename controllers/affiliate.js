@@ -11,6 +11,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/:affiliateId/", (req, res) => {
+    Affiliate.findById(req.params.affiliateId).then((affiliate) => {
+        res.json(affiliate);
+    })
+})
+
 router.post("/create", (req, res) => {
     console.log("Hit the API")
     const newAffiliateInfo = req.body.affiliate
