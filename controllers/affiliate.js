@@ -16,6 +16,11 @@ router.get("/:affiliateId/", (req, res) => {
         res.json(affiliate);
     })
 })
+router.delete("/:affiliateId/", (req, res) => {
+    Affiliate.findByIdAndRemove(req.params.affiliateId).then((affiliate) => {
+        res.json(affiliate);
+    })
+})
 
 router.post("/create", (req, res) => {
     console.log("Hit the API")

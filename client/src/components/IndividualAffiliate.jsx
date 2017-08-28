@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class IndividualAffiliate extends Component {
+
+    _deleteAffiliate = (e) => {
+        const affiliateId = this.props._id;
+        axios.delete(`/api/affiliate/${affiliateId}`)
+        .then(res => {
+            this.props.getAffiliateData();
+        })
+        
+    }
     render() {
         return (
             <div>
@@ -9,12 +19,11 @@ class IndividualAffiliate extends Component {
                 <p><strong>Affiliate Name:</strong> {this.props.name}</p>
                 <p><strong>Affiliate Link:</strong> {this.props.link}</p>
                 <p><strong>Affiliate Token:</strong> {this.props.token}</p>
-                <button className="delete" >Remove from my day</button>
+                <button className="delete" onClick={this._deleteAffiliate}>Delete Affiliate</button>
                 <div>
                 <Link 
                     to={{
-                        pathname: `/${this.props._id}/html-one`,
-                        state: { affiliate: this.props }
+                        pathname: `/${this.props._id}/html-one`
                     }}>
                 HTML one
                 </Link>
@@ -22,8 +31,7 @@ class IndividualAffiliate extends Component {
                 <div>
                 <Link 
                     to={{
-                        pathname: `/${this.props._id}/html-two`,
-                        state: { affiliate: this.props }
+                        pathname: `/${this.props._id}/html-two`
                     }}>
                 HTML two
                 </Link>
@@ -31,14 +39,14 @@ class IndividualAffiliate extends Component {
                 <div>
                 <Link 
                     to={{
-                        pathname: `/${this.props._id}/html-three`,
-                        state: { affiliate: this.props }
+                        pathname: `/${this.props._id}/html-three`
                     }}>
                 HTML three
                 </Link>
                 </div>
                 </div>
                 <div className="row">
+                
                 </div>
             </div>
         );

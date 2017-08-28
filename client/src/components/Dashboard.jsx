@@ -33,6 +33,7 @@ class Dashboard extends Component {
         const affiliateComponent = affiliates.map((affiliate, i) => {
             return <IndividualAffiliate
             {...affiliate}
+            getAffiliateData={this._getAffiliateData}
             key={i} />
         })
         return (
