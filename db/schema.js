@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const affiliateSchema = mongoose.Schema({
   name: String,
   link: String,
-  token: String
+  token: String,
+  date: String,
 });
 
 const emailSchema = mongoose.Schema({

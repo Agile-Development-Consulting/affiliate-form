@@ -14,7 +14,8 @@ Email.remove({}, (err) => console.log(err));
 const affiliateOne = new Affiliate({
     name: "Mark & Cathy Cornelison",
     link: "https://uy237.isrefer.com/go/vs0917/visiontrust/",
-    token: "mark-cathy"
+    token: "mark-cathy",
+    date: "September 16"
 })
 
 affiliateOne.save().then(() => console.log("Affiliate One Saved!"));

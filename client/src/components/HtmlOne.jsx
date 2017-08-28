@@ -8,7 +8,8 @@ class HtmlOne extends Component {
             affiliate: {
                     name: '',
                     link: '',
-                    token: ''
+                    token: '',
+                    date: '',
                 }
         }
     }

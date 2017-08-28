@@ -18,6 +18,7 @@ class IndividualAffiliate extends Component {
                 <p><strong>Affiliate Name:</strong> {this.props.name}</p>
                 <p><strong>Affiliate Link:</strong> {this.props.link}</p>
                 <p><strong>Affiliate Token:</strong> {this.props.token}</p>
+                <p><strong>Affiliate Date:</strong> {this.props.date}</p>
                 <button className="delete" onClick={this._deleteAffiliate}>Delete Affiliate</button>
                 <div>
                 <Link 

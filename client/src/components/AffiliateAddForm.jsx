@@ -9,7 +9,8 @@ class AffiliateAddForm extends Component {
             affiliate: {
                 name: '',
                 link: '',
-                token: ''
+                token: '',
+                date: '',
             }
         }
     }
@@ -27,7 +28,7 @@ class AffiliateAddForm extends Component {
         .then((res) => {
             console.log("success")
             this.props.getAffiliateData();
-            this.setState({affiliate: {name: '', link: '', token: ''}})
+            this.setState({affiliate: {name: '', link: '', token: '', date: ''}})
         }).catch(err => console.log(err));
     }
 
@@ -65,6 +66,16 @@ class AffiliateAddForm extends Component {
                             value={this.state.affiliate.token} 
                             name="token"
                             placeholder="New Affiliate Token"
+                        />
+                </div>
+                <div className="form-field">
+                <label htmlFor="date">Affiliate Date: </label>
+                        <input 
+                            type="text" 
+                            onChange={this._handleChange} 
+                            value={this.state.affiliate.date} 
+                            name="date"
+                            placeholder="New Affiliate Date"
                         />
                 </div>
                 <button className="primary">Add New Affiliate to Database</button>
