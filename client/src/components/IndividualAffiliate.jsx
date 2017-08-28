@@ -46,4 +46,5 @@ class IndividualAffiliate extends Component {
     }
 }
 
+
 export default IndividualAffiliate;
