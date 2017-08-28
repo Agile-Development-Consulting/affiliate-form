@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class IndividualAffiliate extends Component {
-
     _deleteAffiliate = (e) => {
         const affiliateId = this.props._id;
         axios.delete(`/api/affiliate/${affiliateId}`)
