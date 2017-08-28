@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import IndividualAffiliate from "./IndividualAffiliate";
 import AffiliateAddForm from "./AffiliateAddForm";
-import HtmlOne from "./HtmlOne";
 
 class Dashboard extends Component {
 

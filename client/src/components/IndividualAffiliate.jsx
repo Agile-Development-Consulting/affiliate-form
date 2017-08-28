@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import HtmlOne from './HtmlOne';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class IndividualAffiliate extends Component {
     render() {
-        const affiliate = this.props;
         return (
             <div>
-                <div class="row">
+                <div className="row">
                 <p><strong>Affiliate Name:</strong> {this.props.name}</p>
                 <p><strong>Affiliate Link:</strong> {this.props.link}</p>
                 <p><strong>Affiliate Token:</strong> {this.props.token}</p>
@@ -39,7 +37,7 @@ class IndividualAffiliate extends Component {
                 </Link>
                 </div>
                 </div>
-                <div class="row">
+                <div className="row">
                 </div>
             </div>
         );
