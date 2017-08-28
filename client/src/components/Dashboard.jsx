@@ -21,7 +21,6 @@ class Dashboard extends Component {
         this._getAffiliateData();
     }
     _getAffiliateData = () => {
-        console.log("Component mounted")
         axios.get(`/api/affiliate/`)
         .then(res => {
             this.setState({affiliates: res.data})

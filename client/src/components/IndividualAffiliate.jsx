@@ -9,6 +9,7 @@ class IndividualAffiliate extends Component {
                 <p><strong>Affiliate Name:</strong> {this.props.name}</p>
                 <p><strong>Affiliate Link:</strong> {this.props.link}</p>
                 <p><strong>Affiliate Token:</strong> {this.props.token}</p>
+                <button className="delete" >Remove from my day</button>
                 <div>
                 <Link 
                     to={{
