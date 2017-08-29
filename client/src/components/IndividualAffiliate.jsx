@@ -27,18 +27,6 @@ class IndividualAffiliate extends Component {
                 <p><strong>Affiliate Date:</strong> {this.props.token}</p>
                 <button className="delete" onClick={this._deleteAffiliate}>Delete Affiliate</button>
 
-                <form>
-                <label htmlFor="name">Affiliate Name: </label>
-                    <input 
-                        type="text" 
-                        onChange={this.props.handleChange} 
-                        value={this.state.affiliate.name} 
-                        name="name"
-                        placeholder="Affiliate Name"
-                    />
-            <button>Update Food</button>
-            </form>
-
                 <div>
                 <Link 
                     to={{
