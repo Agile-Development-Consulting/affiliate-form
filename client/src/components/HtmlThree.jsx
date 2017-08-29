@@ -52,7 +52,7 @@ class HtmlThree extends Component {
                                         <p style= "font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif; text-align: left; line-height: 1.75; font-size: 16px" >
                                             Sign up today for this <a href="${this.state.affiliate.link}">FREE online Christian conference</a> for parents through September 30, 2017. 
                                          <br><br>
-                                            50+ Amazing apeakers, including our very own ${this.state.affiliate.name}, provide tips and encouragement to help you and your teens build lifelong faith with a session releasing <b>${this.state.affiliate.date}</b>.<br><br><a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/${this.state.affiliate.token}-3.png" align= "middle" style= "display:block; margin: 0 auto;" width="88%"/>
+                                            50+ Amazing speakers, including our very own ${this.state.affiliate.name}, provide tips and encouragement to help you and your teens build lifelong faith with a session releasing <b>${this.state.affiliate.date}</b>.<br><br><a href="${this.state.affiliate.link}"><img src="https://axis.org/wp-content/uploads/2017/08/${this.state.affiliate.token}-3.png" align= "middle" style= "display:block; margin: 0 auto;" width="88%"/>
                                         </a><br>
                                               <div style="text-align: center"><a href="${this.state.affiliate.link}"> 
                                 <button class="button button1" style="font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif; font-weight:light">

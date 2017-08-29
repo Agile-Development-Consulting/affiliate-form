@@ -8,14 +8,7 @@ class Dashboard extends Component {
     constructor() {
         super();
         this.state = {
-            affiliates: [
-                {affiliate: {
-                    name: '',
-                    link: '',
-                    token: '',
-                    date: ''
-                }}
-            ]
+            affiliates: [],
         }
     }
     componentWillMount() {
@@ -35,6 +28,7 @@ class Dashboard extends Component {
             return <IndividualAffiliate
             {...affiliate}
             getAffiliateData={this._getAffiliateData}
+            handleChange={this._handleChange}
             key={i} />
         })
         return (
